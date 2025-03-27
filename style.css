@@ -4,19 +4,21 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: 'Segoe UI';
+    font-family: inter;
 }
 .container{
-    max-width: 1400px;
+    max-width: 1450px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid red;
 }
 /* --------header-------- */
 .header{
-    /* background:linear-gradient(1.02deg, #4A99D3 -17.33%, rgba(74, 153, 211, 0) 75.91%); */
+    background:linear-gradient( #b1d3ea -17.33%, rgba(74, 153, 211, 0) 75.91%);
 }
-/* .header__container{} */
+.header__container{
+    padding: 20px 50px;
+}
 .header__link{
     padding: 0 20px;
     color: rgba(38, 0, 65, 1);
@@ -33,93 +35,83 @@
 .header__title{
     max-width: 498px;
     font-weight: 400;
-    font-size: 50px;
+    font-size: 52px;
     line-height: 70px;
     letter-spacing: 2%;    
 }
 .header__text{
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 400;
     line-height: 36px;
     text-align: left;
-    max-width: 636px;  
+    max-width: 650px;  
     padding: 14px 0; 
 }
 .header__pic{
     padding: 10px;
 }
-/* -------------------------------MAIN---------------- */
-.main{
-    margin: 70px ;
+.hum__menu{
+    font-size: 45px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    padding-bottom: 20px;
 }
-.main-title{
-    font-family: Objective;
-    font-size: 36px;
+/* ----------------MAIN---------------- */
+.main__title{
     font-weight: 500;
+    font-size: 36px;
     line-height: 46px;
-    letter-spacing: 0.05em;
-    text-align: left;
-    
+    letter-spacing: 5%;  
+    max-width: 395px;  
 }
-.main-list{
+.main__list{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    list-style: none;
     flex-wrap: wrap;
-    width: 90%;
+    gap: 30px;
+    padding: 40px 20px;
 }
 .main-item{
-    /* text-align: center; */
-    box-shadow: 10px 10px 10px 10px rgb(243, 234, 234);
-    border: none;
-    border-radius: 20px;
-    margin: 20px 10px;
-    padding: 10px 20px;
-    width: 300px;
-    height: 477px;
-    
+    max-width: 100%;
+    width: 380px;
+    height: 525px;
+    border-radius: 10px;
+    padding: 48px;  
+    box-shadow: 5px 20px 50px rgba(74, 153, 211, 0.2);
 }
-.main-title{
-    font-family: Objective;
-    font-size: 20px;
+.main-subtitle{
     font-weight: 500;
+    font-size: 20px;
     line-height: 30px;
-    letter-spacing: 0.02em;
-    text-align: left;
-    
+    letter-spacing: 2%;  
+    padding-top: 49px; 
 }
 .main-text{
-    font-family: Objective;
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
-    text-align: left;
-    width: 284px;
-    height: 103px;
+    max-width: 284px;
+    padding: 16px 0 52px 0;
+
 }
 .main-img{
-    width: 182px;
-    height: 132px;
-    top: 1184px;
-    left: 194px;
-    gap: 0px;
-    opacity: 0px;
-    padding: 10px 0 ;
+    width: 224px;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
 }
 .main-info{
     color: rgba(74, 153, 211, 1);
-    padding: 100px 0;
 
 }
-/* -------------------------------SECTION--------------------- */
+/* ------------------section--------------------- */
 .section{
     background-color: rgba(74, 153, 211, 0.1);
-    /* margin: 50px 50px; */
     padding: 50px 50px;
 }
 .section-title{
-    font-family: Objective;
     font-size: 26px;
     font-weight: 700;
     line-height: 26.99px;
@@ -150,7 +142,7 @@
     padding: 1px 1px;
     text-align: center;
 }
-/* ----------------------------SECTION---------------- */
+/* ----------services-------- */
 .services{
     /* width: 1075px;
     height: 519px; */
@@ -174,7 +166,6 @@
     left: 586px;
     gap: 0px;
     opacity: 0px;
-    font-family: Objective;
     font-size: 26px;
     font-weight: 700;
     line-height: 26.99px;
@@ -196,7 +187,6 @@
     left: 777px;
     gap: 0px;
     opacity: 0px;
-    font-family: Objective;
     font-size: 18px;
     font-weight: 500;
     line-height: 18.68px;
@@ -209,7 +199,6 @@
     left: 777px;
     gap: 0px;
     opacity: 0.5px;
-    font-family: Objective;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -219,9 +208,13 @@
     .header__title{
         font-size: 40px;
     }
-    .hero__text{
-        font-size: 18px;
-        line-height: 20px;
+    .main__title{
+       text-align: center; 
+       margin: 0 auto;
+       font-size: 30px;
+    }
+    .main__list{
+        justify-content: center;
     }
 }
 @media only screen  and (max-width:770px) {
@@ -234,5 +227,14 @@
         text-align: center;
     }
 }
+@media only screen  and (max-width:600px) {
+    .header__list{
+        display: none;
+    }
+    .hum__menu{
+        display: block;
+    }
+}
+
 
 
