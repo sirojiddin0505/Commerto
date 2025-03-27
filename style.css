@@ -13,87 +13,40 @@
     border: 1px solid red;
 }
 /* --------header-------- */
+.header{
+    /* background:linear-gradient(1.02deg, #4A99D3 -17.33%, rgba(74, 153, 211, 0) 75.91%); */
+}
+/* .header__container{} */
+.header__link{
+    padding: 0 20px;
+    color: rgba(38, 0, 65, 1);
+}
 .header__box, .header__boxs{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
-.header{
-    background: linear-gradient(0deg, #FFFFFF, #FFFFFF),
-    linear-gradient(1.02deg, #4A99D3 -17.33%, rgba(74, 153, 211, 0) 75.91%);
+.header__boxs{
+    padding-top: 50px;
 }
-.header-title{
-    color: rgba(74, 153, 211, 1);
+.header__title{
+    max-width: 498px;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 70px;
+    letter-spacing: 2%;    
 }
-.header-list{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
-}
-.header-link{
-    text-decoration: none;
-}
-.header-item{
-    margin: 0 20px;
-    color: whitesmoke;
-    font-family: Objective;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 18.59px;
-    text-align: left;
-} 
-/* ------------------------------------------HERO---------------------- */
-
-.hero-text{
-    font-family: Objective;
+.header__text{
     font-size: 20px;
     font-weight: 400;
     line-height: 36px;
     text-align: left;
-    width: 636px;
-    height: 110px;
-    top: 398px;
-    left: 109px;
-    gap: 0px;
-    opacity: 0px;    
+    max-width: 636px;  
+    padding: 14px 0; 
 }
-.hero-title{
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 70px;
-    letter-spacing: 0.02em;
-    text-align: left;
-    width: 493px;
-    height: 140px;
-    top: 244px;
-    left: 109px;
-    gap: 0px;
-    opacity: 0px;
-        
-}
-.hero-img{
-    margin: 20px 0;
-    width: 380px;
-    height: 400px;
-    top: 568px;
-    left: 109px;
-    gap: 0px;
-    opacity: 0px;
-    text-align: end;
-}
-.hero-button{
-    width: 180px;
-    height: 60px;
-    top: 568px;
-    left: 109px;
-    gap: 0px;
-    opacity: 0px;
-    background-color: #4A99D3;
-    border: none;
-    border-radius: 5px; 
-    color: white;
-    margin: 0 10px;   
+.header__pic{
+    padding: 10px;
 }
 /* -------------------------------MAIN---------------- */
 .main{
@@ -262,3 +215,24 @@
     line-height: 24px;
     text-align: left;        
 }
+@media only screen  and (max-width:900px) {
+    .header__title{
+        font-size: 40px;
+    }
+    .hero__text{
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+@media only screen  and (max-width:770px) {
+    .header__boxs{
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+    .header__title, .header__text{
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+
